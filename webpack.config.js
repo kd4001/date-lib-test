@@ -1,9 +1,14 @@
 var path = require("path");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
+  .BundleAnalyzerPlugin;
 
 module.exports = (env) => {
   return {
     mode: "development",
+    optimization: {
+      usedExports: true,
+    },
     devServer: {
       port: 8000,
       open: true,
@@ -43,7 +48,7 @@ module.exports = (env) => {
       ],
     },
     output: {
-      path: path.resolve("/"),
+      path: path.resolve("./build"),
       filename: "bundle.js",
     },
     plugins: [
@@ -51,6 +56,7 @@ module.exports = (env) => {
         filename: "index.html",
         template: "index.html",
       }),
+      new BundleAnalyzerPlugin(),
     ],
   };
 };

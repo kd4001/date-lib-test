@@ -1,4 +1,4 @@
-import { Duration, LocalDateTime } from "@js-joda/core";
+import { Duration, LocalDate, LocalDateTime } from "@js-joda/core";
 import { differenceInSeconds, parse } from "date-fns";
 
 import React from "react";
@@ -22,12 +22,13 @@ let dayJsDiff = () => {
 };
 
 let jsJodaDiff = () => {
-  var dt1 = LocalDateTime.parse("2012-12-24T12:00");
+  var date1 = LocalDateTime.parse("2016-02-26T09:42");
+  let dateNow = LocalDateTime.now();
 
-  return Duration.between(dt1, dt1.plusHours(10)).toString();
+  return Duration.between(date1, dateNow).toString();
 };
 
-function Test() {
+let Test = () => {
   let dayJsDuration = dayJsDiff();
   let jsJodaDuration = jsJodaDiff();
   let dateFnsDuration = dateFnsDiff();
@@ -39,6 +40,6 @@ function Test() {
       <div>Date-fns {dateFnsDuration}</div>
     </div>
   );
-}
+};
 
 export default Test;
