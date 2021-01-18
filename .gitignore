@@ -1,0 +1,14 @@
+node_modules
+.eslintcache
+.DS_Store
+*.vscode/settings.json
+.vscode
+*.map
+*.bundle.js
+*.env
+package.lock
+yarn-error.log*
+
+# webstorm settings
+.idea/
+

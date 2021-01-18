@@ -1,0 +1,33 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --config webpack.config.js --content-base src --hot --inline"
+  },
+  "author": "Karan",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-transform-react-jsx": "^7.12.12",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "@js-joda/core": "^3.2.0",
+    "@webpack-cli/serve": "^1.2.1",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.0.1",
+    "date-fns": "^2.16.1",
+    "dayjs": "^1.10.3",
+    "html-webpack-plugin": "^4.5.0",
+    "node-sass": "^5.0.0",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "sass-loader": "^10.1.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
+  }
+}
